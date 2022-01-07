@@ -96,7 +96,7 @@ public class EMDeconstructor extends DeconstructorGUI implements RecipeDisplayIt
                         new CustomItemStack(Items.EMCarbon, 4),
                         new CustomItemStack(Items.EMHydrogen, 12),
                 });
-        registerRecipe(4, new ItemStack[] {new ItemStack(Material.REDSTONE, 64)},
+        registerRecipe(4, new ItemStack[] {new ItemStack(Material.REDSTONE, 16)},
                 new ItemStack[] {
                         new CustomItemStack(Items.EMCopper, 8),
                 });
@@ -135,7 +135,7 @@ public class EMDeconstructor extends DeconstructorGUI implements RecipeDisplayIt
     }
     @Override
     public String getInventoryTitle() {
-        return "&8Deconstructor";
+        return "&8解构机";
     }
     @Override
     public int getCapacity() {

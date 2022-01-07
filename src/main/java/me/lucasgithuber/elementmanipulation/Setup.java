@@ -20,8 +20,8 @@ public class Setup {
     public static final SlimefunItemStack WATER = new SlimefunItemStack(
             "EM_WATERBUCKET",
             Material.WATER_BUCKET,
-            "&fWater bucket",
-            "&8Works as a normal water bucket"
+            "&f水桶",
+            "&8像普通水桶一样工作"
     );
         public static void setup(ElementManipulation p) {
             // Category

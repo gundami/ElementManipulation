@@ -18,117 +18,117 @@ public final class EMMaterials {
     public static final SlimefunItemStack EMWaterBucket = new SlimefunItemStack(
             "EM_WATERBUCKET",
             Material.WATER_BUCKET,
-            "&fWater bucket",
-            "&fNormal water bucket",
-            "&fUsable in vanilla workbench"
+            "&f化工水桶",
+            "&f一种普通的水桶",
+            "&f可用在工作台内使用"
     );
     public static final SlimefunItemStack EMCarrot = new SlimefunItemStack(
             "EM_CARROT",
             Material.CARROT,
-            "&fCarrot",
-            "&fNormal carrot",
-            "&fUsable in vanilla workbench"
+            "&f化工胡萝卜",
+            "&f一种普通的胡萝卜",
+            "&f可在工作台内使用"
     );
     public static final SlimefunItemStack EMCocoa = new SlimefunItemStack(
             "EM_COCOA",
             Material.COCOA_BEANS,
-            "&fCocoa beans",
-            "&fNormal carrot",
-            "&fUsable in vanilla workbench"
+            "&f化工可可豆",
+            "&f一种普通的可可豆",
+            "&f可在工作台内使用"
     );
     public static final SlimefunItemStack EMNetherWart = new SlimefunItemStack(
             "EM_WART",
             Material.NETHER_WART,
-            "&fNether wart",
-            "&fNormal nether warts",
-            "&fUsable in vanilla workbench"
+            "&f化工地狱疣",
+            "&f一种普通的地狱疣",
+            "&f可在工作台内使用"
     );
     public static final SlimefunItemStack EMPotato = new SlimefunItemStack(
             "EM_POTATO",
             Material.POTATO,
-            "&fPotato",
-            "&fNormal potato",
-            "&fUsable in vanilla workbench"
+            "&f化工马铃薯",
+            "&f一种普通的马铃薯",
+            "&f可在工作台内使用"
     );
     public static final SlimefunItemStack EMPumpkinSeeds = new SlimefunItemStack(
             "EM_PUMPKIN_SEEDS",
             Material.PUMPKIN_SEEDS,
-            "&fPumpkin seeds",
-            "&fNormal pumpkin seeds",
-            "&fUsable in vanilla workbench"
+            "&f化工南瓜种子",
+            "&f一种普通的南瓜种子",
+            "&f可在工作台内使用"
     );
 
 
     public static final SlimefunItemStack EMRedstone = new SlimefunItemStack(
             "EM_REDSTONE",
             Material.REDSTONE,
-            "&fRedstone",
-            "&fNormal redstone",
-            "&fUsable in vanilla workbench"
+            "&f化工红石",
+            "&f一种普通的",
+            "&f可在工作台内使用"
     );
 
     public static final SlimefunItemStack EMSweetBerries = new SlimefunItemStack(
             "EM_BERRIES",
             Material.SWEET_BERRIES,
-            "&fSweet berries",
-            "&fNormal berries",
-            "&fUsable in vanilla workbench"
+            "&f化工甜浆果",
+            "&f一种普通的甜浆果",
+            "&f可在工作台内使用"
     );
     public static final SlimefunItemStack EMWheatSeeds = new SlimefunItemStack(
             "EM_WHEAT_SEEDS",
             Material.WHEAT_SEEDS,
-            "&fWheat seeds",
-            "&fNormal seeds",
-            "&fUsable in vanilla workbench"
+            "&f化工小麦种子",
+            "&f一种普通的小麦种子",
+            "&f可在工作台内使用"
     );
     public static final SlimefunItemStack EMApple = new SlimefunItemStack(
             "EM_APPLE",
             Material.APPLE,
-            "&fApple",
-            "&fNormal apple",
-            "&fUsable in vanilla workbench"
+            "&f化工苹果",
+            "&f一种普通的苹果",
+            "&f可在工作台内使用"
     );
     public static final SlimefunItemStack EMBeetrootSeeds = new SlimefunItemStack(
             "EM_BEETROOT_SEEDS",
             Material.BEETROOT_SEEDS,
-            "&fBeetroot seeds",
-            "&fNormal beetroot seeds",
-            "&fUsable in vanilla workbench"
+            "&f化工甜菜种子",
+            "&f一种普通的甜菜种子",
+            "&f可在工作台内使用"
     );
     public static final SlimefunItemStack EMBone = new SlimefunItemStack(
             "EM_BONE",
             Material.BONE,
-            "&fBone",
-            "&fNormal bone",
-            "&fUsable in vanilla workbench"
+            "&f化工骨头",
+            "&f一种普通的骨头",
+            "&f可在工作台内使用"
     );
     public static final SlimefunItemStack EMGold = new SlimefunItemStack(
             "EM_GOLD",
             Material.GOLD_INGOT,
-            "&fGold ingot",
-            "&fNormal gold ingot",
-            "&fUsable in vanilla workbench"
+            "&f化工金锭",
+            "&f一种普通的金锭",
+            "&f可在工作台内使用"
     );
     public static final SlimefunItemStack EMHoneyBottle = new SlimefunItemStack(
             "EM_HONEY",
             Material.HONEY_BOTTLE,
-            "&fHoney bottle",
-            "&fNormal honey",
-            "&fUsable in vanilla workbench"
+            "&f化工蜂蜜瓶",
+            "&f一种普通的蜂蜜瓶",
+            "&f可在工作台内使用"
     );
     public static final SlimefunItemStack EMInkSac = new SlimefunItemStack(
             "EM_INK",
             Material.INK_SAC,
-            "&fInk sac",
-            "&fNormal ink ",
-            "&fUsable in vanilla workbench"
+            "&f化工墨囊",
+            "&f一种普通的墨囊",
+            "&f可在工作台内使用"
     );
     public static final SlimefunItemStack EMLapisLazuli = new SlimefunItemStack(
             "EM_LAPIS",
             Material.LAPIS_LAZULI,
-            "&fLapis lazuli",
-            "&fNormal honey",
-            "&fUsable in vanilla workbench"
+            "&f青金石",
+            "&f一种普通的青金石",
+            "&f可在工作台内使用"
     );
 
     public static void setup(ElementManipulation em){

@@ -36,7 +36,7 @@ public final class EMJunctionTable extends io.github.mooy1.infinitylib.machines.
     private static final int RECIPE_SLOT = 7;
     public static final MachineRecipeType TYPE = new MachineRecipeType("em_junction_table",
             new CustomItemStack(Items.EMJunctionTable, Items.EMJunctionTable.getDisplayName(),
-                    "", "&cUse the junctions category to see the correct recipe!"));
+                    "", "&c请通过化工产品类别查看正确配方"));
 
     private final int energy;
 
@@ -60,7 +60,7 @@ public final class EMJunctionTable extends io.github.mooy1.infinitylib.machines.
     @Override
     protected void setup(BlockMenuPreset preset) {
         super.setup(preset);
-        preset.addItem(7, new CustomItemStack(Material.KNOWLEDGE_BOOK, ChatColor.GREEN+"Recipes"), ChestMenuUtils.getEmptyClickHandler());
+        preset.addItem(7, new CustomItemStack(Material.KNOWLEDGE_BOOK, ChatColor.GREEN+"配方"), ChestMenuUtils.getEmptyClickHandler());
     }
 
     @Override
@@ -77,8 +77,8 @@ public final class EMJunctionTable extends io.github.mooy1.infinitylib.machines.
         int charge = getCharge(menu.getLocation());
         if (charge < this.energy) {
             p.sendMessage(
-                    ChatColor.RED + "Not enough energy!",
-                    ChatColor.GREEN + "Charge: " + ChatColor.RED + charge + ChatColor.GREEN + "/" + this.energy + " J"
+                    ChatColor.RED + "没有足够的电!",
+                    ChatColor.GREEN + "电量: " + ChatColor.RED + charge + ChatColor.GREEN + "/" + this.energy + " J"
             );
         } else {
             super.craft(b, menu, p);
