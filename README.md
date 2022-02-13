@@ -15,6 +15,8 @@ Slimefun版本: 最新版（RC-27以上）
 
 [![Build Status](https://github.com/StarWishsama/Slimefun4/releases.svg)](https://github.com/StarWishsama/Slimefun4)
 
+[汉化版下载]（https://builds.guizhanss.net/haiman233/Element-Manipulation-CN/master ）
+
 ## 漏洞 🐛
 
 在issue界面汇报bug，或在 discord上联系 @林alguém林#4507
