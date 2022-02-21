@@ -75,7 +75,7 @@ public class EMUltraCompressor extends UCGui implements RecipeDisplayItem {
     @Override
     public String getInventoryTitle() {
         return "&8Ultra compressor";
-    }
+    }//123
     @Override
     public int getCapacity() {
         return 8192;
