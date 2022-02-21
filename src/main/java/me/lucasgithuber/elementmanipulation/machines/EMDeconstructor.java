@@ -6,6 +6,7 @@ import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import me.lucasgithuber.elementmanipulation.Items;
+import me.lucasgithuber.elementmanipulation.elements.Elements;
 import me.lucasgithuber.elementmanipulation.utils.DeconstructorGUI;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.MachineRecipe;
 import org.bukkit.Material;
@@ -25,7 +26,7 @@ public class EMDeconstructor extends DeconstructorGUI implements RecipeDisplayIt
                 SlimefunItems.REINFORCED_PLATE, SlimefunItems.NUCLEAR_REACTOR, SlimefunItems.REINFORCED_PLATE,
                 SlimefunItems.REINFORCED_PLATE, SlimefunItems.LARGE_CAPACITOR, SlimefunItems.REINFORCED_PLATE
         });
-        this.setProcessingSpeed(1).setCapacity(64).setEnergyConsumption(16);
+        this.setProcessingSpeed(1).setCapacity(256).setEnergyConsumption(128);
 
     }
 
@@ -33,79 +34,94 @@ public class EMDeconstructor extends DeconstructorGUI implements RecipeDisplayIt
 
         registerRecipe(4, new ItemStack[] {new ItemStack(Material.WATER_BUCKET)},
                 new ItemStack[] {new ItemStack(Material.BUCKET),
-                        new CustomItemStack(Items.EMHydrogen, 2), new CustomItemStack(Items.EMOxygen, 1)
+                        new CustomItemStack(Elements.HYDROGEN, 2), new CustomItemStack(Elements.OXYGEN, 1)
                 });
 
         registerRecipe(4, new ItemStack[] {new ItemStack(Material.CARROT)},
-                new ItemStack[] {new CustomItemStack(Items.EMCarbon, 20)
+                new ItemStack[] {new CustomItemStack(Elements.CARBON, 20)
                 });
 
         registerRecipe(4, new ItemStack[] {new ItemStack(Material.COCOA_BEANS)},
-                new ItemStack[] {new CustomItemStack(Items.EMCarbon, 7),
-                        new CustomItemStack(Items.EMHydrogen, 8)
+                new ItemStack[] {new CustomItemStack(Elements.CARBON, 7),
+                        new CustomItemStack(Elements.HYDROGEN, 8)
                 });
 
         registerRecipe(4, new ItemStack[] {new ItemStack(Material.NETHER_WART)},
-                new ItemStack[] {new CustomItemStack(Items.EMCarbon, 19),
-                        new CustomItemStack(Items.EMHydrogen, 14),
+                new ItemStack[] {new CustomItemStack(Elements.CARBON, 19),
+                        new CustomItemStack(Elements.HYDROGEN, 14),
 
                 });
 
         registerRecipe(4, new ItemStack[] {new ItemStack(Material.POTATO)},
-                new ItemStack[] {new CustomItemStack(Items.EMCarbon, 6),
-                        new CustomItemStack(Items.EMHydrogen, 10),
-                        new CustomItemStack(Items.EMNitrogen,1)
+                new ItemStack[] {new CustomItemStack(Elements.CARBON, 6),
+                        new CustomItemStack(Elements.HYDROGEN, 10),
+                        new CustomItemStack(Elements.NITROGEN,1)
                 });
 
         registerRecipe(4, new ItemStack[] {new ItemStack(Material.PUMPKIN_SEEDS)},
                 new ItemStack[] {
-                        new CustomItemStack(Items.EMHydrogen, 3),
-                        new CustomItemStack(Items.EMOxygen, 2),
+                        new CustomItemStack(Elements.HYDROGEN, 3),
+                        new CustomItemStack(Elements.OXYGEN, 2),
                 });
         registerRecipe(4, new ItemStack[] {new ItemStack(Material.SWEET_BERRIES)},
                 new ItemStack[] {
-                        new CustomItemStack(Items.EMHydrogen, 12),
-                        new CustomItemStack(Items.EMOxygen, 12),
+                        new CustomItemStack(Elements.HYDROGEN, 12),
+                        new CustomItemStack(Elements.OXYGEN, 12),
                 });
         registerRecipe(4, new ItemStack[] {new ItemStack(Material.WHEAT_SEEDS)},
                 new ItemStack[] {
-                        new CustomItemStack(Items.EMCarbon, 3),
-                        new CustomItemStack(Items.EMOxygen, 3),
+                        new CustomItemStack(Elements.CARBON, 3),
+                        new CustomItemStack(Elements.OXYGEN, 3),
                 });
         registerRecipe(4, new ItemStack[] {new ItemStack(Material.APPLE)},
                 new ItemStack[] {
-                        new CustomItemStack(Items.EMHydrogen, 5),
-                        new CustomItemStack(Items.EMCarbon, 5),
+                        new CustomItemStack(Elements.HYDROGEN, 5),
+                        new CustomItemStack(Elements.CARBON, 5),
                 });
         registerRecipe(4, new ItemStack[] {new ItemStack(Material.BEETROOT_SEEDS)},
                 new ItemStack[] {
-                        new CustomItemStack(Items.EMHydrogen, 8),
-                        new CustomItemStack(Items.EMCarbon, 12),
+                        new CustomItemStack(Elements.HYDROGEN, 8),
+                        new CustomItemStack(Elements.CARBON, 12),
                 });
         registerRecipe(4, new ItemStack[] {new ItemStack(Material.BONE)},
                 new ItemStack[] {
-                        new CustomItemStack(Items.EMCalcium, 6),
-                        new CustomItemStack(Items.EMOxygen, 6),
+                        new CustomItemStack(Elements.CALCIUM, 6),
+                        new CustomItemStack(Elements.OXYGEN, 6),
                 });
         registerRecipe(4, new ItemStack[] {new ItemStack(Material.GOLD_INGOT)},
                 new ItemStack[] {
-                        new CustomItemStack(Items.EMAu, 8),
+                        new CustomItemStack(Elements.EMAu, 8),
                 });
         registerRecipe(4, new ItemStack[] {new ItemStack(Material.INK_SAC)},
                 new ItemStack[] {
-                        new CustomItemStack(Items.EMCarbon, 4),
-                        new CustomItemStack(Items.EMHydrogen, 12),
+                        new CustomItemStack(Elements.CARBON, 4),
+                        new CustomItemStack(Elements.HYDROGEN, 12),
                 });
         registerRecipe(4, new ItemStack[] {new ItemStack(Material.REDSTONE, 16)},
                 new ItemStack[] {
-                        new CustomItemStack(Items.EMCopper, 8),
+                        new CustomItemStack(Elements.EMCopper, 8),
                 });
-        registerRecipe(4, new ItemStack[] {new ItemStack(Material.LAPIS_LAZULI)},
+        registerRecipe(4, new ItemStack[] {new ItemStack(Material.LAPIS_LAZULI, 64)},
                 new ItemStack[] {
-                        new CustomItemStack(Items.EMSodium, 8),
-                        new CustomItemStack(Items.EMCalcium, 8),
-                        new CustomItemStack(Items.EMSilicon, 4),
+                        new CustomItemStack(Elements.SODIUM, 8),
+                        new CustomItemStack(Elements.CALCIUM, 8),
+                        new CustomItemStack(Elements.SILICON, 4),
                 });
+        registerRecipe(4, new ItemStack[] {new ItemStack(Material.MELON_SEEDS, 64)},
+                new ItemStack[] {
+                        new CustomItemStack(Elements.HYDROGEN, 6),
+                        new CustomItemStack(Elements.CARBON, 4),
+                        new CustomItemStack(Elements.OXYGEN, 2),
+                });
+        registerRecipe(4, new ItemStack[] {new ItemStack(Material.POISONOUS_POTATO, 64)},
+                new ItemStack[] {
+                        new CustomItemStack(Elements.HYDROGEN, 5),
+                        new CustomItemStack(Elements.CARBON, 5),
+                        new CustomItemStack(Elements.OXYGEN, 2),
+                        new CustomItemStack(Elements.OXYGEN, 2),
+                });
+
+
 
     }
     public List<ItemStack> getDisplayRecipes() {
