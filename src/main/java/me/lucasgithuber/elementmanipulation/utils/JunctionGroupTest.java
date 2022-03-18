@@ -36,7 +36,7 @@ import java.util.*;
  * this guy is a god XD
  * @author Mooy1
  */
-public class JunctionGroup extends FlexItemGroup {
+public class JunctionGroupTest extends FlexItemGroup {
 
     private static final int[] JUNCTION_RECIPE_SLOTS = {
             3, 4, 5, 6, 7, 8,
@@ -71,17 +71,17 @@ public class JunctionGroup extends FlexItemGroup {
             1, 9
     };
     private static final ItemStack CRAFT = new CustomItemStack(Material.SMITHING_TABLE,
-            ChatColor.GREEN + "根据库中的物品创建配方",
-            "&a左击 移动1配方",
-            "&a右击 移动多个配方"
+            ChatColor.GREEN + "Create the recipe from items in your inventory: ",
+            "&aLeft-Click to move enough for 1 recipe",
+            "&aRight-Click to move enough to as many as possible"
     );
-    private static final ItemStack INFO = new CustomItemStack(Material.CYAN_STAINED_GLASS_PANE, "&a信息");
+    private static final ItemStack INFO = new CustomItemStack(Material.CYAN_STAINED_GLASS_PANE, "&aInfo");
     private static final SlimefunGuideImplementation GUIDE = Slimefun.getRegistry().getSlimefunGuide(SlimefunGuideMode.SURVIVAL_MODE);
     private static final Map<UUID, String> HISTORY = new HashMap<>();
     private static final LinkedHashMap<String, Pair<SlimefunItemStack, ItemStack[]>> ITEMS = new LinkedHashMap<>();
     private static final List<String> IDS = new ArrayList<>();
 
-    JunctionGroup(NamespacedKey key, ItemStack item, int tier) {
+    JunctionGroupTest(NamespacedKey key, ItemStack item, int tier) {
         super(key, item, tier);
         JunctionTable.TYPE.sendRecipesTo((input, output) -> {
             SlimefunItemStack sfStack = (SlimefunItemStack) output;
@@ -116,7 +116,7 @@ public class JunctionGroup extends FlexItemGroup {
             }
         }
 
-        ChestMenu menu = new ChestMenu("&b化工产品");
+        ChestMenu menu = new ChestMenu("&bJunctions ");
 
         if (entry.bench != null) {
             menu.addMenuClickHandler(1, (player1, i, itemStack, clickAction) -> {
@@ -164,9 +164,9 @@ public class JunctionGroup extends FlexItemGroup {
                         ChatColor.WHITE + ItemUtils.getItemName(sfItem.getItem()),
                         "&4&l" + Slimefun.getLocalization().getMessage(player, "guide.locked"),
                         "",
-                        "&a> 单击解锁",
+                        "&a> Click to unlock",
                         "",
-                        "&7花费: &b" + research.getCost() + " 等级"
+                        "&7Cost: &b" + research.getCost() + " Level(s)"
                 );
                 menu.addItem(i, resItem, (p, slot, item1, action) -> {
                     research.unlockFromGuide(GUIDE, p, entry.profile, sfItem, Categories.EMJunctionCategory, 0);
@@ -381,5 +381,5 @@ public class JunctionGroup extends FlexItemGroup {
     public String getVIID(ItemStack vanillaItem){
         return id;
     }
-    public static ItemStack OUTPUT_BORDER = new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "&6输出");
+    public static ItemStack OUTPUT_BORDER = new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "&6Output");
 }
