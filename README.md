@@ -13,9 +13,11 @@ Minecraft版本 1.17+
 
 Slimefun版本: 最新版（RC-27以上）
 
-[![Build Status](https://github.com/StarWishsama/Slimefun4/releases.svg)](https://github.com/StarWishsama/Slimefun4)
+[![Slimefun 构建状态](https://img.shields.io/github/v/release/StarWishsama/Slimefun4?display_name=tag&sort=semver)](https://github.com/StarWishsama/Slimefun4/releases)
 
-[汉化版下载](https://builds.guizhanss.net/haiman233/Element-Manipulation-CN/master/)
+点击下方下载插件：
+
+[![构建状态](https://builds.guizhanss.net/f/haiman233/Element-Manipulation-CN/master/badge.svg)](https://builds.guizhanss.net/haiman233/Element-Manipulation-CN/master/)
 
 ## 漏洞 🐛
 
