@@ -11,50 +11,50 @@
 
     import static me.lucasgithuber.elementmanipulation.elements.Elements.*;
 
-    public final class EMMaterials {
+    public final class Materials {
     @Getter
-    private static EMRedstone emRedstone;
+    private static MultiOutputItem emRedstone;
     @Getter
-    private static EMLapis emLapis;
+    private static MultiOutputItem emLapis;
     @Getter
-    private static EMEmerald emEmerald;
+    private static MultiOutputItem emEmerald;
 
-    public static final SlimefunItemStack EMWaterBucket = new SlimefunItemStack(
+    public static final SlimefunItemStack WATER_BUCKET = new SlimefunItemStack(
         "EM_WATERBUCKET",
         Material.WATER_BUCKET,
         "&f化工水桶",
         "&f一种普通的水桶",
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMCarrot = new SlimefunItemStack(
+    public static final SlimefunItemStack CARROT = new SlimefunItemStack(
         "EM_CARROT",
         Material.CARROT,
         "&f化工胡萝卜",
         "&f一种普通的胡萝",
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMCocoa = new SlimefunItemStack(
+    public static final SlimefunItemStack COCOA = new SlimefunItemStack(
         "EM_COCOA",
         Material.COCOA_BEANS,
         "&f化工可可豆",
         "&f一种普通的可可豆",
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMNetherWart = new SlimefunItemStack(
+    public static final SlimefunItemStack NETHER_WART = new SlimefunItemStack(
         "EM_WART",
         Material.NETHER_WART,
         "&f化工地狱疣",
         "&f一种普通的地狱疣",
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMPotato = new SlimefunItemStack(
+    public static final SlimefunItemStack POTATO = new SlimefunItemStack(
         "EM_POTATO",
         Material.POTATO,
         "&f化工马铃薯",
         "&f一种普通的马铃薯",
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMPumpkinSeeds = new SlimefunItemStack(
+    public static final SlimefunItemStack PUMPKIN_SEEDS = new SlimefunItemStack(
         "EM_PUMPKIN_SEEDS",
         Material.PUMPKIN_SEEDS,
         "&f化工南瓜种子",
@@ -63,7 +63,7 @@
     );
 
 
-    public static final SlimefunItemStack EMRedstone = new SlimefunItemStack(
+    public static final SlimefunItemStack REDSTONE = new SlimefunItemStack(
         "EM_REDSTONE",
         Material.REDSTONE,
         "&f化工红石",
@@ -71,35 +71,35 @@
         "&f可在工作台内使用"
     );
 
-    public static final SlimefunItemStack EMSweetBerries = new SlimefunItemStack(
+    public static final SlimefunItemStack SWEET_BERRIES = new SlimefunItemStack(
         "EM_BERRIES",
         Material.SWEET_BERRIES,
         "&f化工甜浆果",
         "&f一种普通的甜浆果",
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMWheatSeeds = new SlimefunItemStack(
+    public static final SlimefunItemStack WHEAT_SEEDS = new SlimefunItemStack(
         "EM_WHEAT_SEEDS",
         Material.WHEAT_SEEDS,
         "&f化工小麦种子",
         "&f一种普通的小麦种子",
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMApple = new SlimefunItemStack(
+    public static final SlimefunItemStack APPLE = new SlimefunItemStack(
         "EM_APPLE",
         Material.APPLE,
         "&f化工苹果",
         "&f一种普通的苹果",
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMBeetrootSeeds = new SlimefunItemStack(
+    public static final SlimefunItemStack BEETROOT_SEEDS = new SlimefunItemStack(
         "EM_BEETROOT_SEEDS",
         Material.BEETROOT_SEEDS,
         "&f化工甜菜种子",
         "&f一种普通的甜菜种子",
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMBone = new SlimefunItemStack(
+    public static final SlimefunItemStack BONE = new SlimefunItemStack(
         "EM_BONE",
         Material.BONE,
         "&f化工骨头",
@@ -113,103 +113,151 @@
         "&f一种普通的金锭",
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMHoneyBottle = new SlimefunItemStack(
+    public static final SlimefunItemStack HONEY = new SlimefunItemStack(
         "EM_HONEY",
         Material.HONEY_BOTTLE,
         "&f化工蜂蜜瓶",
         "&f一种普通的蜂蜜瓶",
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMInkSac = new SlimefunItemStack(
+    public static final SlimefunItemStack INK = new SlimefunItemStack(
         "EM_INK",
         Material.INK_SAC,
         "&f化工墨囊",
         "&f一种普通的墨囊",
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMLapisLazuli = new SlimefunItemStack(
+    public static final SlimefunItemStack LAPIS_LAZULI = new SlimefunItemStack(
         "EM_LAPIS",
         Material.LAPIS_LAZULI,
         "&f化工青金石",
         "&f一种普通的青金石",
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMMelonSeeds = new SlimefunItemStack(
+    public static final SlimefunItemStack MELON_SEEDS = new SlimefunItemStack(
         "EM_MELON_SEEDS",
         Material.MELON_SLICE,
         "&fMelon seeds",
-        "&fNormal melon seeds",
+
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMPoisonPotato = new SlimefunItemStack(
+    public static final SlimefunItemStack POISON_POTATO = new SlimefunItemStack(
         "EM_POISON_POTATO",
         Material.POISONOUS_POTATO,
         "&fPoisonous potato",
-        "&fNormal poisonous potato",
+
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMSugar = new SlimefunItemStack(
+    public static final SlimefunItemStack SUGAR = new SlimefunItemStack(
         "EM_SUGAR",
         Material.SUGAR,
         "&fSugar",
-        "&fNormal sugar",
+
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMClay = new SlimefunItemStack(
+    public static final SlimefunItemStack CLAY = new SlimefunItemStack(
         "EM_CLAY",
         Material.CLAY_BALL,
         "&fClay ball",
-        "&fNormal clay",
+
         "&fUsable in vanilla workbench"
     );
-    public static final SlimefunItemStack EMCoal = new SlimefunItemStack(
+    public static final SlimefunItemStack COAL = new SlimefunItemStack(
         "EM_COAL",
         Material.COAL,
         "&fCoal",
-        "&fNormal coal",
+
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMDiamond = new SlimefunItemStack(
+    public static final SlimefunItemStack DIAMOND = new SlimefunItemStack(
         "EM_DIAMOND",
         Material.DIAMOND,
         "&fDiamond",
-        "&fNormal diamond",
+
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMEmerald = new SlimefunItemStack(
+    public static final SlimefunItemStack EMERALD = new SlimefunItemStack(
         "EM_EMERALD",
         Material.EMERALD,
         "&fEmerald",
-        "&fNormal emerald",
+
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMFlint = new SlimefunItemStack(
+    public static final SlimefunItemStack FLINT = new SlimefunItemStack(
         "EM_FLINT",
         Material.FLINT,
         "&fFlint",
         "&fNormal flint",
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMGhastTear= new SlimefunItemStack(
+    public static final SlimefunItemStack TEAR = new SlimefunItemStack(
         "EM_TEAR",
         Material.GHAST_TEAR,
         "&fGhast tear",
         "&fNormal tear",
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMQuartz = new SlimefunItemStack(
+    public static final SlimefunItemStack QUARTZ = new SlimefunItemStack(
         "EM_QUARTZ",
         Material.QUARTZ,
         "&fNether quartz",
         "&fNormal nether quartz",
         "&f可在工作台内使用"
     );
+        public static final SlimefunItemStack SAND = new SlimefunItemStack(
+                "EM_SAND",
+                Material.SAND,
+                "&fSand",
+                "&fUsable in vanilla workbench"
+        );
+        public static final SlimefunItemStack EGG = new SlimefunItemStack(
+                "EM_EGG",
+                Material.EGG,
+                "&fEgg",
+                "&fUsable in vanilla workbench"
+        );
+        public static final SlimefunItemStack LEAVES = new SlimefunItemStack(
+                "EM_LEAVES",
+                Material.OAK_LEAVES,
+                "&fOak leaves",
+                "&fUsable in vanilla workbench"
+        );
+        public static final SlimefunItemStack MAGMA = new SlimefunItemStack(
+                "EM_MAGMA_BALL",
+                Material.MAGMA_CREAM,
+                "&fMagma ball",
+                "&fUsable in vanilla workbench"
+        );
+        public static final SlimefunItemStack TERRACOTA = new SlimefunItemStack(
+                "EM_TERRACOTA",
+                Material.TERRACOTTA,
+                "&fTerracota",
+                "&fUsable in vanilla workbench"
+        );
+        public static final SlimefunItemStack OBSIDIAN = new SlimefunItemStack(
+                "EM_OBSIDIAN",
+                Material.OBSIDIAN,
+                "&fObsidian",
+                "&fUsable in vanilla workbench"
+        );
+        public static final SlimefunItemStack GLASS = new SlimefunItemStack(
+                "EM_GLASS",
+                Material.GLASS,
+                "&fGlass",
+                "&fUsable in vanilla workbench"
+        );
+        public static final SlimefunItemStack SUGAR_CANE = new SlimefunItemStack(
+                "EM_SUGAR_CANE",
+                Material.SUGAR_CANE,
+                "&fSugar cane",
+                "&fUsable in vanilla workbench"
+        );
 
 
 
     public static void setup(ElementManipulation em){
 
-    new EMItem(Categories.EMJunctionCheat, EMCarrot,  JunctionTable.TYPE, new ItemStack[] {
+    new Item(Categories.JUNCTION_CHEAT, CARROT,  JunctionTable.TYPE, new ItemStack[] {
             CARBON,CARBON,CARBON,CARBON,CARBON,CARBON,
             CARBON,null,     null,     null,    null,  CARBON,
             CARBON,null,HYDROGEN,HYDROGEN,null,      CARBON,
@@ -217,7 +265,7 @@
             CARBON,null,     null,     null,    null,      CARBON,
             CARBON,CARBON,CARBON,CARBON,CARBON,CARBON,
     }).setUseableInWorkbench(true).register(em);
-    new EMItem(Categories.EMJunctionCheat, EMCocoa,  JunctionTable.TYPE, new ItemStack[] {
+    new Item(Categories.JUNCTION_CHEAT, COCOA,  JunctionTable.TYPE, new ItemStack[] {
             CARBON,CARBON,CARBON,CARBON,CARBON,CARBON,
             CARBON, null,    null,    null,    null,    CARBON,
             NITROGEN,    null,    OXYGEN, OXYGEN,     null,    NITROGEN,
@@ -225,7 +273,7 @@
             HYDROGEN, null,  null,    null,    null,              HYDROGEN,
             HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN,
     }).setUseableInWorkbench(true).register(em);
-    new EMItem(Categories.EMJunctionCheat, EMNetherWart,  JunctionTable.TYPE, new ItemStack[] {
+    new Item(Categories.JUNCTION_CHEAT, NETHER_WART,  JunctionTable.TYPE, new ItemStack[] {
             CARBON,CARBON,CARBON,CARBON,CARBON,CARBON,
             CARBON,HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN, CARBON,
             CARBON,HYDROGEN,OXYGEN,  OXYGEN,  HYDROGEN, CARBON,
@@ -233,7 +281,7 @@
             CARBON,HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN, CARBON,
             CARBON,CARBON,CARBON,CARBON,CARBON,CARBON,
     }).setUseableInWorkbench(true).register(em);
-    new EMItem(Categories.EMJunctionCheat, EMPotato,  JunctionTable.TYPE, new ItemStack[] {
+    new Item(Categories.JUNCTION_CHEAT, POTATO,  JunctionTable.TYPE, new ItemStack[] {
             HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN,
             HYDROGEN,null,null,null,null,HYDROGEN,
             HYDROGEN,null,OXYGEN,OXYGEN,null,HYDROGEN,
@@ -241,7 +289,7 @@
             CARBON,null,null,null,null,CARBON,
             CARBON,CARBON,CARBON,CARBON,CARBON,CARBON,
     }).setUseableInWorkbench(true).register(em);
-    new EMItem(Categories.EMJunctionCheat, EMPumpkinSeeds,  JunctionTable.TYPE, new ItemStack[] {
+    new Item(Categories.JUNCTION_CHEAT, PUMPKIN_SEEDS,  JunctionTable.TYPE, new ItemStack[] {
             null,null,null,null,null,null,
             null,null,      HYDROGEN,null,null,null,
             null,HYDROGEN,HYDROGEN,null,null,null,
@@ -250,15 +298,15 @@
             null,null,null,null,null,null
     }).setUseableInWorkbench(true).register(em);
 
-    emRedstone = new EMRedstone(Categories.EMJunctionCheat, EMRedstone,  JunctionTable.TYPE, new ItemStack[] {
-            null,SlimefunItems.PLASTIC_SHEET,EMCopper,EMCopper,SlimefunItems.PLASTIC_SHEET,null,
-            null,SlimefunItems.PLASTIC_SHEET,EMCopper,EMCopper,SlimefunItems.PLASTIC_SHEET,null,
-            null,SlimefunItems.PLASTIC_SHEET,EMCopper,EMCopper,SlimefunItems.PLASTIC_SHEET,null,
-            null,SlimefunItems.PLASTIC_SHEET,EMCopper,EMCopper,SlimefunItems.PLASTIC_SHEET,null,
-            null,SlimefunItems.PLASTIC_SHEET,EMCopper,EMCopper,SlimefunItems.PLASTIC_SHEET,null,
-            null,SlimefunItems.PLASTIC_SHEET,EMCopper,EMCopper,SlimefunItems.PLASTIC_SHEET,null,
-    }, new SlimefunItemStack(EMRedstone, 64));
-    new EMItem(Categories.EMJunctionCheat,EMSweetBerries,  JunctionTable.TYPE, new ItemStack[] {
+    emRedstone = new MultiOutputItem(Categories.JUNCTION_CHEAT, REDSTONE,  JunctionTable.TYPE, new ItemStack[] {
+            null,SlimefunItems.PLASTIC_SHEET,COPPER,COPPER,SlimefunItems.PLASTIC_SHEET,null,
+            null,SlimefunItems.PLASTIC_SHEET,COPPER,COPPER,SlimefunItems.PLASTIC_SHEET,null,
+            null,SlimefunItems.PLASTIC_SHEET,COPPER,COPPER,SlimefunItems.PLASTIC_SHEET,null,
+            null,SlimefunItems.PLASTIC_SHEET,COPPER,COPPER,SlimefunItems.PLASTIC_SHEET,null,
+            null,SlimefunItems.PLASTIC_SHEET,COPPER,COPPER,SlimefunItems.PLASTIC_SHEET,null,
+            null,SlimefunItems.PLASTIC_SHEET,COPPER,COPPER,SlimefunItems.PLASTIC_SHEET,null,
+    }, new SlimefunItemStack(REDSTONE, 64));
+    new Item(Categories.JUNCTION_CHEAT, SWEET_BERRIES,  JunctionTable.TYPE, new ItemStack[] {
             HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN,
             HYDROGEN,HYDROGEN,null,null,            HYDROGEN,HYDROGEN,
             HYDROGEN,null,OXYGEN,OXYGEN,null,                       HYDROGEN,
@@ -266,7 +314,7 @@
             CARBON,CARBON,null,null,   CARBON,CARBON,
             CARBON,CARBON,CARBON,CARBON,CARBON,CARBON,
     }).setUseableInWorkbench(true).register(em);
-    new EMItem(Categories.EMJunctionCheat, EMWheatSeeds,  JunctionTable.TYPE, new ItemStack[] {
+    new Item(Categories.JUNCTION_CHEAT, WHEAT_SEEDS,  JunctionTable.TYPE, new ItemStack[] {
             null,null,null,null,null,null,
             null,null,CARBON,null,null,null,
             null,CARBON,CARBON,null,null,null,
@@ -274,7 +322,7 @@
             null,null,null,OXYGEN,null,null,
             null,null,null,null,null,null,
     }).setUseableInWorkbench(true).register(em);
-    new EMItem(Categories.EMJunctionCheat, EMApple,  JunctionTable.TYPE, new ItemStack[] {
+    new Item(Categories.JUNCTION_CHEAT, APPLE,  JunctionTable.TYPE, new ItemStack[] {
             null,null,      null,      OXYGEN,null,null,
             null,HYDROGEN,HYDROGEN,OXYGEN,CARBON,null,
             null,HYDROGEN,OXYGEN,  OXYGEN,CARBON,null,
@@ -282,7 +330,7 @@
             null,HYDROGEN,OXYGEN,     CARBON,CARBON,null,
             null,null,      OXYGEN,      null,null,null,
     }).setUseableInWorkbench(true).register(em);
-    new EMItem(Categories.EMJunctionCheat, EMBeetrootSeeds,  JunctionTable.TYPE, new ItemStack[] {
+    new Item(Categories.JUNCTION_CHEAT, BEETROOT_SEEDS,  JunctionTable.TYPE, new ItemStack[] {
             CARBON,null,null,null,null,CARBON,
             CARBON,HYDROGEN,null,null,HYDROGEN,CARBON,
             CARBON,HYDROGEN,OXYGEN,OXYGEN,HYDROGEN,CARBON,
@@ -290,7 +338,7 @@
             CARBON,HYDROGEN,null,null,HYDROGEN,CARBON,
             CARBON,null,null,null,null,CARBON,
     }).setUseableInWorkbench(true).register(em);
-    new EMItem(Categories.EMJunctionCheat, EMBone,  JunctionTable.TYPE, new ItemStack[] {
+    new Item(Categories.JUNCTION_CHEAT, BONE,  JunctionTable.TYPE, new ItemStack[] {
             null,OXYGEN,CALCIUM, CALCIUM,OXYGEN,null,
             null,OXYGEN,CALCIUM, CALCIUM,OXYGEN,null,
             null,OXYGEN,CALCIUM, CALCIUM,OXYGEN,null,
@@ -298,15 +346,15 @@
             null,OXYGEN,CALCIUM, CALCIUM,OXYGEN,null,
             null,OXYGEN,CALCIUM, CALCIUM,OXYGEN,null,null,
     }).setUseableInWorkbench(true).register(em);
-    new EMItem(Categories.EMJunctionCheat, EMGold,  JunctionTable.TYPE, new ItemStack[] {
-            null,null,EMAu,EMAu,null,null,
-            null,null,EMAu,EMAu,null,null,
-            null,null,EMAu,EMAu,null,null,
-            null,null,EMAu,EMAu,null,null,
-            null,null,EMAu,EMAu,null,null,
-            null,null,EMAu,EMAu,null,null,
+    new Item(Categories.JUNCTION_CHEAT, GOLD_INGOT,  JunctionTable.TYPE, new ItemStack[] {
+            null,null,GOLD,GOLD,null,null,
+            null,null,GOLD,GOLD,null,null,
+            null,null,GOLD,GOLD,null,null,
+            null,null,GOLD,GOLD,null,null,
+            null,null,GOLD,GOLD,null,null,
+            null,null,GOLD,GOLD,null,null,
     }).setUseableInWorkbench(true).register(em);
-    new EMItem(Categories.EMJunctionCheat, EMHoneyBottle,  JunctionTable.TYPE, new ItemStack[] {
+    new Item(Categories.JUNCTION_CHEAT, HONEY,  JunctionTable.TYPE, new ItemStack[] {
             CARBON,null,HYDROGEN,HYDROGEN,null,OXYGEN,
             CARBON,null,HYDROGEN,HYDROGEN,null,OXYGEN,
             CARBON,null,HYDROGEN,HYDROGEN,null,OXYGEN,
@@ -314,7 +362,7 @@
             CARBON,null,HYDROGEN,HYDROGEN,null,OXYGEN,
             CARBON,null,HYDROGEN,HYDROGEN,null,OXYGEN,
     }).setUseableInWorkbench(true).register(em);
-    new EMItem(Categories.EMJunctionCheat, EMInkSac,  JunctionTable.TYPE, new ItemStack[] {
+    new Item(Categories.JUNCTION_CHEAT, INK,  JunctionTable.TYPE, new ItemStack[] {
             null,null,null,null,null,null,
             null,HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN,null,
             null,HYDROGEN,CARBON,CARBON,HYDROGEN,null,
@@ -322,16 +370,15 @@
             null,HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN,null,
             null,null,null,null,null,null,
     }).setUseableInWorkbench(true).register(em);
-
-    emLapis = new EMLapis(Categories.EMJunctionCheat, EMLapisLazuli,  JunctionTable.TYPE, new ItemStack[] {
+    emLapis = new MultiOutputItem(Categories.JUNCTION_CHEAT, LAPIS_LAZULI,  JunctionTable.TYPE, new ItemStack[] {
             SODIUM,SODIUM,OXYGEN,OXYGEN,CALCIUM,CALCIUM,
             SODIUM,SILICON,SULFUR,SULFUR,SILICON,CALCIUM,
             SODIUM,ALUMINUM,new ItemStack(Material.BLUE_DYE),new ItemStack(Material.BLUE_DYE),ALUMINUM,CALCIUM,
             SODIUM,ALUMINUM,new ItemStack(Material.BLUE_DYE),new ItemStack(Material.BLUE_DYE),ALUMINUM,CALCIUM,
             SODIUM,SILICON,SULFUR,SULFUR,SILICON,CALCIUM,
             SODIUM,SODIUM,OXYGEN,OXYGEN,CALCIUM,CALCIUM,
-    }, new SlimefunItemStack(EMLapisLazuli, 64));
-    new EMItem(Categories.EMJunctionCheat, EMMelonSeeds,  JunctionTable.TYPE, new ItemStack[] {
+    }, new SlimefunItemStack(LAPIS_LAZULI, 64));
+    new Item(Categories.JUNCTION_CHEAT, MELON_SEEDS,  JunctionTable.TYPE, new ItemStack[] {
             null,null,HYDROGEN,HYDROGEN,null,null,
             null,HYDROGEN,CARBON,CARBON,HYDROGEN,null,
             HYDROGEN,CARBON,OXYGEN,OXYGEN,CARBON,HYDROGEN,
@@ -339,15 +386,15 @@
             null,HYDROGEN,CARBON,CARBON,HYDROGEN,null,
             null,null,HYDROGEN,HYDROGEN,null,null
     }).setUseableInWorkbench(true).register(em);
-    new EMItem(Categories.EMJunctionCheat, EMPoisonPotato,  JunctionTable.TYPE, new ItemStack[] {
+    new Item(Categories.JUNCTION_CHEAT, POISON_POTATO,  JunctionTable.TYPE, new ItemStack[] {
             HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN,
-            HYDROGEN,EMSilver,null,null,CARBON,HYDROGEN,
+            HYDROGEN,SILVER,null,null,CARBON,HYDROGEN,
             HYDROGEN,null,OXYGEN,OXYGEN,null,HYDROGEN,
             CARBON,null,OXYGEN,OXYGEN,null,CARBON,
             CARBON,CARBON,null,null,NITROGEN,CARBON,
             CARBON,CARBON,CARBON,CARBON,CARBON,CARBON,
     }).setUseableInWorkbench(true).register(em);
-    new EMItem(Categories.EMJunctionCheat, EMSugar,  JunctionTable.TYPE, new ItemStack[] {
+    new Item(Categories.JUNCTION_CHEAT, SUGAR,  JunctionTable.TYPE, new ItemStack[] {
             HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN,
             HYDROGEN,CARBON,CARBON,CARBON,CARBON,HYDROGEN,
             HYDROGEN,CARBON,OXYGEN,OXYGEN,CARBON,HYDROGEN,
@@ -355,7 +402,7 @@
             HYDROGEN,CARBON,CARBON,CARBON,CARBON,HYDROGEN,
             HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN,HYDROGEN
     }).setUseableInWorkbench(true).register(em);
-    new EMItem(Categories.EMJunctionCheat, EMClay,  JunctionTable.TYPE, new ItemStack[] {
+    new Item(Categories.JUNCTION_CHEAT, CLAY,  JunctionTable.TYPE, new ItemStack[] {
             null,null,null,null,null,null,
             null,null,null,null,null,null,
             null,null,SILICON,OXYGEN,null,null,
@@ -363,7 +410,7 @@
             null,null,null,null,null,null,
             null,null,null,null,null,null
     }).setUseableInWorkbench(true).register(em);
-    new EMItem(Categories.EMJunctionCheat, EMCoal,  JunctionTable.TYPE, new ItemStack[] {
+    new Item(Categories.JUNCTION_CHEAT, COAL,  JunctionTable.TYPE, new ItemStack[] {
             CARBON,CARBON,CARBON,CARBON,CARBON,CARBON,
             CARBON,CARBON,CARBON,CARBON,CARBON,CARBON,
             CARBON,CARBON,CARBON,CARBON,CARBON,CARBON,
@@ -371,15 +418,15 @@
             CARBON,CARBON,CARBON,CARBON,CARBON,CARBON,
             CARBON,CARBON,CARBON,CARBON,CARBON,CARBON
     }).setUseableInWorkbench(true).register(em);
-    emEmerald = new EMEmerald(Categories.EMJunctionCheat, EMEmerald,  JunctionTable.TYPE, new ItemStack[] {
+    emEmerald = new MultiOutputItem(Categories.JUNCTION_CHEAT, EMERALD,  JunctionTable.TYPE, new ItemStack[] {
             BERYLLIUM,BERYLLIUM,SILICON,SILICON,OXYGEN,OXYGEN,
             BERYLLIUM,SILICON,SILICON,SILICON,SILICON,OXYGEN,
             SILICON,SILICON,SILICON,SILICON,SILICON,SILICON,
             SILICON,SILICON,SILICON,SILICON,SILICON,SILICON,
             ALUMINUM,SILICON,SILICON,SILICON,SILICON,OXYGEN,
             ALUMINUM,ALUMINUM,SILICON,SILICON,OXYGEN,OXYGEN,
-    }, new SlimefunItemStack(EMEmerald, 64));
-    new EMItem(Categories.EMJunctionCheat, EMFlint,  JunctionTable.TYPE, new ItemStack[] {
+    }, new SlimefunItemStack(EMERALD, 64));
+    new Item(Categories.JUNCTION_CHEAT, FLINT,  JunctionTable.TYPE, new ItemStack[] {
             null,null,null,null,null,null,
             null,null,null,null,null,null,
             null,null,null,OXYGEN,null,null,
@@ -387,7 +434,7 @@
             null,null,null,null,null,null,
             null,null,null,null,null,null
     }).setUseableInWorkbench(true).register(em);
-    new EMItem(Categories.EMJunctionCheat, EMGhastTear,  JunctionTable.TYPE, new ItemStack[] {
+    new Item(Categories.JUNCTION_CHEAT, TEAR,  JunctionTable.TYPE, new ItemStack[] {
             null,null,null,null,null,null,
             null,null,null,null,null,null,
             null,null,HYDROGEN,HYDROGEN,null,null,null,
@@ -395,7 +442,7 @@
             null,null,null,null,null,null,
             null,null,null,null,null,null
     }).setUseableInWorkbench(true).register(em);
-    new EMItem(Categories.EMJunctionCheat, EMWaterBucket,  JunctionTable.TYPE, new ItemStack[] {
+    new Item(Categories.JUNCTION_CHEAT, WATER_BUCKET,  JunctionTable.TYPE, new ItemStack[] {
             null,null,null,null,null,null,
             null,null,null,null,null,null,
             null,null,OXYGEN,HYDROGEN,null,null,
@@ -403,7 +450,7 @@
             null,null,null,null,null,null,
             null,null,null,null,null,null
     }).setUseableInWorkbench(true).register(em);
-    new EMItem(Categories.EMJunctionCheat, EMQuartz,  JunctionTable.TYPE, new ItemStack[] {
+    new Item(Categories.JUNCTION_CHEAT, QUARTZ,  JunctionTable.TYPE, new ItemStack[] {
             null,null,null,null,null,null,
             null,null,null,null,null,null,
             null,null,OXYGEN,null,null,null,
@@ -411,6 +458,74 @@
             null,null,null,null,null,null,
             null,null,null,null,null,null
     }).setUseableInWorkbench(true).register(em);
+
+    //blocks
+
+        new Item(Categories.JUNCTION_CHEAT, SAND,  JunctionTable.TYPE, new ItemStack[] {
+                OXYGEN, SILICON,OXYGEN, SILICON,OXYGEN, SILICON,
+                SILICON,OXYGEN,SILICON,OXYGEN,SILICON,OXYGEN,
+                OXYGEN, SILICON,OXYGEN, SILICON,OXYGEN, SILICON,
+                SILICON,OXYGEN,SILICON,OXYGEN,SILICON,OXYGEN,
+                OXYGEN, SILICON,OXYGEN, SILICON,OXYGEN, SILICON,
+                SILICON,OXYGEN, SILICON,OXYGEN, SILICON,OXYGEN
+        }).setUseableInWorkbench(true).register(em);
+        new Item(Categories.JUNCTION_CHEAT, EGG,  JunctionTable.TYPE, new ItemStack[] {
+                null,null,null,null,null,null,
+                null,null,CALCIUM, CALCIUM,null,null,
+                null,CARBON,OXYGEN,OXYGEN,CARBON,null,
+                null,CARBON,OXYGEN,OXYGEN,CARBON,null,
+                null,null,CARBON,CARBON,null,null,
+                null,null,null,null,null,null
+        }).setUseableInWorkbench(true).register(em);
+        new Item(Categories.JUNCTION_CHEAT, LEAVES,  JunctionTable.TYPE, new ItemStack[] {
+                null,null,null,null,null,null,
+                HYDROGEN,HYDROGEN,OXYGEN,OXYGEN,HYDROGEN,HYDROGEN,
+                CARBON,CARBON,OXYGEN,OXYGEN,CARBON,CARBON,
+                CARBON,CARBON,OXYGEN,OXYGEN,CARBON,CARBON,
+                HYDROGEN,HYDROGEN,OXYGEN,OXYGEN,HYDROGEN,HYDROGEN,
+                null,null,null,null,null,null
+        }).setUseableInWorkbench(true).register(em);
+        new Item(Categories.JUNCTION_CHEAT, MAGMA,  JunctionTable.TYPE, new ItemStack[] {
+                null,null,null,null,null,null,
+                null,MAGNESIUM,MAGNESIUM,MAGNESIUM,MAGNESIUM,null,
+                null,MAGNESIUM,SILICON,OXYGEN,MAGNESIUM,null,
+                null,MAGNESIUM,OXYGEN,IRON,MAGNESIUM,null,
+                null,MAGNESIUM,MAGNESIUM,MAGNESIUM,MAGNESIUM,null,
+                null,null,null,null,null,null
+        }).setUseableInWorkbench(true).register(em);
+        new Item(Categories.JUNCTION_CHEAT, TERRACOTA,  JunctionTable.TYPE, new ItemStack[] {
+                ALUMINUM,SILICON,ALUMINUM,SILICON,ALUMINUM,SILICON,
+                SILICON,ALUMINUM,SILICON,ALUMINUM,SILICON,ALUMINUM,
+                ALUMINUM,SILICON,ALUMINUM,SILICON,ALUMINUM,SILICON,
+                SILICON,ALUMINUM,SILICON,ALUMINUM,SILICON,ALUMINUM,
+                ALUMINUM,SILICON,ALUMINUM,SILICON,ALUMINUM,SILICON,
+                SILICON,ALUMINUM,SILICON,ALUMINUM,SILICON,ALUMINUM
+        }).setUseableInWorkbench(true).register(em);
+        new Item(Categories.JUNCTION_CHEAT, OBSIDIAN,  JunctionTable.TYPE, new ItemStack[] {
+                SILICON,OXYGEN,IRON,OXYGEN,OXYGEN,null,
+                OXYGEN,IRON,IRON,OXYGEN,OXYGEN,null,
+                SILICON,OXYGEN,IRON,OXYGEN,OXYGEN,null,
+                OXYGEN,IRON,IRON,OXYGEN,OXYGEN,null,
+                SILICON,OXYGEN,IRON,OXYGEN,OXYGEN,null,
+                OXYGEN,IRON,IRON,OXYGEN,OXYGEN,null
+        }).setUseableInWorkbench(true).register(em);
+        new Item(Categories.JUNCTION_CHEAT, GLASS,  JunctionTable.TYPE, new ItemStack[] {
+                SODIUM,CARBON,OXYGEN,OXYGEN,OXYGEN,SODIUM,
+                OXYGEN,null,null,null,null,CARBON,
+                OXYGEN,null,null,null,null,OXYGEN,
+                OXYGEN,null,null,null,null,OXYGEN,
+                CARBON,null,null,null,null,OXYGEN,
+                SODIUM,OXYGEN,OXYGEN,OXYGEN,CARBON,SODIUM
+        }).setUseableInWorkbench(true).register(em);
+        new Item(Categories.JUNCTION_CHEAT, SUGAR_CANE,  JunctionTable.TYPE, new ItemStack[] {
+                CARBON,CARBON,CARBON,CARBON,CARBON,CARBON,
+                HYDROGEN,CARBON,CARBON,CARBON,CARBON,HYDROGEN,
+                HYDROGEN,CARBON,OXYGEN,OXYGEN,CARBON,HYDROGEN,
+                HYDROGEN,CARBON,OXYGEN,OXYGEN,CARBON,HYDROGEN,
+                HYDROGEN,CARBON,CARBON,CARBON,CARBON,HYDROGEN,
+                CARBON,CARBON,CARBON,CARBON,CARBON,CARBON
+        }).setUseableInWorkbench(true).register(em);
+
 
     emRedstone.setUseableInWorkbench(true).register(em);
     emLapis.setUseableInWorkbench(true).register(em);

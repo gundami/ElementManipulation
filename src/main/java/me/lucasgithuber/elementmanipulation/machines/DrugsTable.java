@@ -9,7 +9,7 @@ import io.github.thebusybiscuit.slimefun4.core.attributes.EnergyNetComponent;
 import io.github.thebusybiscuit.slimefun4.core.networks.energy.EnergyNetComponentType;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
-import me.lucasgithuber.elementmanipulation.category.JunctionGroup;
+import me.lucasgithuber.elementmanipulation.category.DrugsGroup;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 import org.bukkit.ChatColor;
@@ -22,36 +22,38 @@ import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
-public final class JunctionTable extends io.github.mooy1.infinitylib.machines.CraftingBlock implements EnergyNetComponent {
+public final class DrugsTable extends io.github.mooy1.infinitylib.machines.CraftingBlock implements EnergyNetComponent {
 
     public static final int[] INPUT_SLOTS = {
-            0, 1, 2, 3, 4, 5,
-            9, 10, 11, 12, 13, 14,
-            18, 19, 20, 21, 22, 23,
-            27, 28, 29, 30, 31, 32,
-            36, 37, 38, 39, 40, 41,
-            45, 46, 47, 48, 49, 50
+            2,3,4,5,6,7,
+            11,12,13,14,15,16,
+            20,21,22,23,24,25,
+            29,30,31,32,33,34,
+            38,39,40,41,42,43,
+            47,48,49,50,51,52
     };
-    private static final int RECIPE_SLOT = 7;
-    public static final MachineRecipeType TYPE = new MachineRecipeType("em_junction_table",
-            new CustomItemStack(Machines.EMJunctionTable, Machines.EMJunctionTable.getDisplayName(),
-                    "", "&c请通过化工产品类别查看正确配方"));
+    private static final int RECIPE_SLOT = 0;
+    public static final MachineRecipeType TYPE = new MachineRecipeType("em_drugs_table",
+            new CustomItemStack(Machines.DRUGS_TABLE, Machines.DRUGS_TABLE.getDisplayName(),
+                    "", "&cUse the drugs category to see the correct recipe!"));
 
     private final int energy;
 
-    public JunctionTable(ItemGroup category, SlimefunItemStack item, RecipeType type, ItemStack[] recipe, int energy) {
+    public DrugsTable(ItemGroup category, SlimefunItemStack item, RecipeType type, ItemStack[] recipe, int energy) {
         super(category, item, type, recipe);
         addRecipesFrom(TYPE);
         layout(new MachineLayout()
                 .inputSlots(INPUT_SLOTS)
                 .outputSlots(new int[]{
-                        34, 43
+                        45
                 })
-                .statusSlot(16)
-                .inputBorder(new int[0])
-                .outputBorder(new int[]{24, 33, 42, 51, 52, 53, 25, 26, 35, 44
-
-                }).background(new int[]{6, 8, 15, 17})
+                .statusSlot(27)
+                .inputBorder(new int[]{
+                        1,10,19,28,37,46,8,17,26,35,44,53
+                })
+                .outputBorder(new int[]{
+                        36
+                }).background(new int[]{9,18})
         );
         this.energy = energy;
     }
@@ -59,14 +61,14 @@ public final class JunctionTable extends io.github.mooy1.infinitylib.machines.Cr
     @Override
     protected void setup(BlockMenuPreset preset) {
         super.setup(preset);
-        preset.addItem(7, new CustomItemStack(Material.KNOWLEDGE_BOOK, ChatColor.GREEN + "配方"), ChestMenuUtils.getEmptyClickHandler());
+        preset.addItem(0, new CustomItemStack(Material.KNOWLEDGE_BOOK, ChatColor.GREEN + "Recipes"), ChestMenuUtils.getEmptyClickHandler());
     }
 
     @Override
     protected void onNewInstance(BlockMenu menu, Block b) {
         super.onNewInstance(menu, b);
         menu.addMenuClickHandler(RECIPE_SLOT, (p, slot, item, action) -> {
-            JunctionGroup.open(p, menu);
+            DrugsGroup.open(p, menu);
             return false;
         });
     }
@@ -76,8 +78,8 @@ public final class JunctionTable extends io.github.mooy1.infinitylib.machines.Cr
         int charge = getCharge(menu.getLocation());
         if (charge < this.energy) {
             p.sendMessage(
-                    ChatColor.RED + "没有足够的电!",
-                    ChatColor.GREEN + "电量: " + ChatColor.RED + charge + ChatColor.GREEN + "/" + this.energy + " J"
+                    ChatColor.RED + "Not enough energy!",
+                    ChatColor.GREEN + "Charge: " + ChatColor.RED + charge + ChatColor.GREEN + "/" + this.energy + " J"
             );
         } else {
             super.craft(b, menu, p);

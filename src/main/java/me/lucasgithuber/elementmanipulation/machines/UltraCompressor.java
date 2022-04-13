@@ -4,11 +4,9 @@ import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import me.lucasgithuber.elementmanipulation.Items;
 import me.lucasgithuber.elementmanipulation.elements.Elements;
-import me.lucasgithuber.elementmanipulation.utils.UCGui;
+import me.lucasgithuber.elementmanipulation.gui.UCGui;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.MachineRecipe;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -17,19 +15,12 @@ import javax.annotation.Nonnull;
 import java.util.ArrayList;
 import java.util.List;
 
-import static me.lucasgithuber.elementmanipulation.utils.Categories.EMElements;
 
+public class UltraCompressor extends UCGui implements RecipeDisplayItem {
 
-public class EMUltraCompressor extends UCGui implements RecipeDisplayItem {
+    public UltraCompressor(ItemGroup c, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
 
-    public EMUltraCompressor(ItemGroup c) {
-
-        super(c, Items.EMUltraCompressor, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                SlimefunItems.ELECTRIC_PRESS_2, SlimefunItems.ELECTRIC_PRESS_2, SlimefunItems.ELECTRIC_PRESS_2,
-                SlimefunItems.REINFORCED_PLATE, new ItemStack(Material.GLASS), SlimefunItems.REINFORCED_PLATE,
-                SlimefunItems.REINFORCED_PLATE, SlimefunItems.LARGE_CAPACITOR, SlimefunItems.REINFORCED_PLATE
-        });
-        this.setProcessingSpeed(1).setCapacity(64).setEnergyConsumption(16);
+        super(c, item, recipeType, recipe);
 
     }
 

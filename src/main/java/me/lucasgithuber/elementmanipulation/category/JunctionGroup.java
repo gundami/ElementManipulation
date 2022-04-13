@@ -1,4 +1,4 @@
-package me.lucasgithuber.elementmanipulation.utils;
+package me.lucasgithuber.elementmanipulation.category;
 
 import io.github.mooy1.infinitylib.common.Scheduler;
 import io.github.mooy1.infinitylib.common.StackUtils;
@@ -15,8 +15,9 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.ItemUtils;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import lombok.AllArgsConstructor;
-import me.lucasgithuber.elementmanipulation.Items;
 import me.lucasgithuber.elementmanipulation.machines.JunctionTable;
+import me.lucasgithuber.elementmanipulation.machines.Machines;
+import me.lucasgithuber.elementmanipulation.utils.Categories;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ChestMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import org.bukkit.ChatColor;
@@ -36,7 +37,7 @@ import java.util.*;
  * this guy is a god XD
  * @author Mooy1
  */
-public class JunctionGroupTest extends FlexItemGroup {
+public class JunctionGroup extends FlexItemGroup {
 
     private static final int[] JUNCTION_RECIPE_SLOTS = {
             3, 4, 5, 6, 7, 8,
@@ -71,17 +72,17 @@ public class JunctionGroupTest extends FlexItemGroup {
             1, 9
     };
     private static final ItemStack CRAFT = new CustomItemStack(Material.SMITHING_TABLE,
-            ChatColor.GREEN + "Create the recipe from items in your inventory: ",
-            "&aLeft-Click to move enough for 1 recipe",
-            "&aRight-Click to move enough to as many as possible"
+            ChatColor.GREEN + "根据库中的物品创建配方",
+            "&a左击 移动1配方",
+            "&a右击 移动多个配方"
     );
-    private static final ItemStack INFO = new CustomItemStack(Material.CYAN_STAINED_GLASS_PANE, "&aInfo");
+    private static final ItemStack INFO = new CustomItemStack(Material.CYAN_STAINED_GLASS_PANE, "&a信息");
     private static final SlimefunGuideImplementation GUIDE = Slimefun.getRegistry().getSlimefunGuide(SlimefunGuideMode.SURVIVAL_MODE);
     private static final Map<UUID, String> HISTORY = new HashMap<>();
     private static final LinkedHashMap<String, Pair<SlimefunItemStack, ItemStack[]>> ITEMS = new LinkedHashMap<>();
     private static final List<String> IDS = new ArrayList<>();
 
-    JunctionGroupTest(NamespacedKey key, ItemStack item, int tier) {
+    public JunctionGroup(NamespacedKey key, ItemStack item, int tier) {
         super(key, item, tier);
         JunctionTable.TYPE.sendRecipesTo((input, output) -> {
             SlimefunItemStack sfStack = (SlimefunItemStack) output;
@@ -116,7 +117,7 @@ public class JunctionGroupTest extends FlexItemGroup {
             }
         }
 
-        ChestMenu menu = new ChestMenu("&bJunctions ");
+        ChestMenu menu = new ChestMenu("&b化工产品");
 
         if (entry.bench != null) {
             menu.addMenuClickHandler(1, (player1, i, itemStack, clickAction) -> {
@@ -164,12 +165,12 @@ public class JunctionGroupTest extends FlexItemGroup {
                         ChatColor.WHITE + ItemUtils.getItemName(sfItem.getItem()),
                         "&4&l" + Slimefun.getLocalization().getMessage(player, "guide.locked"),
                         "",
-                        "&a> Click to unlock",
+                        "&a> 单击解锁",
                         "",
-                        "&7Cost: &b" + research.getCost() + " Level(s)"
+                        "&7花费: &b" + research.getCost() + " 等级"
                 );
                 menu.addItem(i, resItem, (p, slot, item1, action) -> {
-                    research.unlockFromGuide(GUIDE, p, entry.profile, sfItem, Categories.EMJunctionCategory, 0);
+                    research.unlockFromGuide(GUIDE, p, entry.profile, sfItem, Categories.JUNCTION_CATEGORY, 0);
                     return false;
                 });
             } else {
@@ -225,8 +226,8 @@ public class JunctionGroupTest extends FlexItemGroup {
         }
 
         if (entry.bench == null) {
-            menu.addItem(JUNCTION_TABLE, Items.EMJunctionTable, (p, slot, item, action) -> {
-                SlimefunItem slimefunItem = Items.EMJunctionTable.getItem();
+            menu.addItem(JUNCTION_TABLE, Machines.EMJunctionTable, (p, slot, item, action) -> {
+                SlimefunItem slimefunItem = Machines.EMJunctionTable.getItem();
                 if (slimefunItem != null) {
                     LinkedList<SlimefunItem> list = new LinkedList<>();
                     list.add(slimefunItem);
@@ -264,7 +265,7 @@ public class JunctionGroupTest extends FlexItemGroup {
             menu.addItem(slot, ChestMenuUtils.getBackground(), ChestMenuUtils.getEmptyClickHandler());
         }
         for (int slot : JUNCTION_OUTPUT_BORDER) {
-            menu.addItem(slot, JunctionGroupTest.OUTPUT_BORDER, ChestMenuUtils.getEmptyClickHandler());
+            menu.addItem(slot, DrugsGroup.OUTPUT_BORDER, ChestMenuUtils.getEmptyClickHandler());
         }
         menu.addItem(JUNCTION_OUTPUT, pair.getFirstValue(), ChestMenuUtils.getEmptyClickHandler());
         for (int slot : WORKBENCH_BORDER) {
@@ -377,9 +378,5 @@ public class JunctionGroupTest extends FlexItemGroup {
         private final SlimefunGuideImplementation impl;
 
     }
-    public String id;
-    public String getVIID(ItemStack vanillaItem){
-        return id;
-    }
-    public static ItemStack OUTPUT_BORDER = new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "&6Output");
+
 }
