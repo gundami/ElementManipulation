@@ -106,7 +106,7 @@
         "&f一种普通的骨头",
         "&f可在工作台内使用"
     );
-    public static final SlimefunItemStack EMGold = new SlimefunItemStack(
+    public static final SlimefunItemStack GOLD_INGOT = new SlimefunItemStack(
         "EM_GOLD",
         Material.GOLD_INGOT,
         "&f化工金锭",
